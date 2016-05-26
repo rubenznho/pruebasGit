@@ -1,0 +1,26 @@
+¿Cómo usar GIT?
+
+1. Debemos inicializar la carpeta con la que vamos a trabajar. 
+	git init
+	Esta carpeta será el working tree de nuestro entorno de trabajo.
+
+2. Luego debemos vincularnos a algún repositorio de un servidor git. En mi 
+	caso he escogido GitHub. 
+	git remote add origin https://github.com/rubenznho/pruebasGit.git
+
+Ya tenemos la estructura de git puesta en marcha. Debemos tener claro los 
+siguientes conceptos.
+	- La carpeta en la que se hizo "git init" es el working tree.
+	- El repositorio al que hemos vinculado nuestra carpeta es nuestro
+		repositorio externo (el servidor externo).
+	- Implicitamente a lo anterior, tenemos un Index y un repositorio 
+		local, aunque no los hayamos inicializado.
+	
+3. Imaginemos que tenenmos un hola.txt creado en nuestra carpeta (working tree)
+	y lo queremos añadir al repositorio externo. Los pasos que debemos 
+	seguir son los siguientes:
+	a) git add -> Esto añade el contenido a nuestro Index.
+	b) git commit -m "primera subida" -> El comando añade (todo) lo que
+		tengamos en el Index al repositorio local.
+	c) git push https://github.com/rubenznho/pruebasGit.git
+		GitHub nos pedirá autenticarnos con usuario y contraseña.
